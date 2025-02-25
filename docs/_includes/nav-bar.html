@@ -1,9 +1,19 @@
-<nav>
-  {% for item in site.data.nav-bar %}
-  <a href="{{ item.link | relative_url }}" 
-    style="padding: 8px;"
-    {% if page.url == item.link %} class="current" {% endif %}>
-    {{ item.name }}
-  </a>
-  {% endfor %}
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    
+    <ul class="navbar-nav">
+    {% for item in site.data.nav-bar %}
+      <li class="nav-item">
+        <a
+          href="{{ item.link | relative_url }}"
+          {% if page.url == item.link %} class="nav-link active"
+          {% else %} class="nav-link" 
+          {% endif %}
+        >
+        {{ item.name }}
+        </a>
+      </li>  
+    {% endfor %}
+    </ul>
+  </div>
 </nav>
