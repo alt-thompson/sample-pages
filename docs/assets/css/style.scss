@@ -2,11 +2,13 @@
 ---
 
 /* CSS comment */
-/** { border: 1px solid hotpink;}*/
+* { border: 1px solid hotpink;}
 
-body {background-color: lightblue;}
+html { border: 1px solid black; }
 
-h1 {color: navy; margin-left: 20px; border: 1px solid tomato;}
+body {background-color: lightblue; border: 1px solid red;}
+
+h1 {color: navy; margin-left: 20px; border: 1px solid orange;}
 
 div.section {background-color: green; color: pink; border: 1px solid tomato;}
 

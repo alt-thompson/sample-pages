@@ -1,8 +1,11 @@
 /* CSS comment */
-/** { border: 1px solid hotpink;}*/
-body { background-color: lightblue; }
+* { border: 1px solid hotpink; }
 
-h1 { color: navy; margin-left: 20px; border: 1px solid tomato; }
+html { border: 1px solid black; }
+
+body { background-color: lightblue; border: 1px solid red; }
+
+h1 { color: navy; margin-left: 20px; border: 1px solid orange; }
 
 div.section { background-color: green; color: pink; border: 1px solid tomato; }
 
