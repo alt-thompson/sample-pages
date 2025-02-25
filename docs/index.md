@@ -3,11 +3,11 @@ layout: default
 title: Home | Organization Name
 ---
 
-<div>
+<div id="about">
 Information about our organization
 </div>
 
-<div>
+<div id="projects">
 <h2>Recent projects</h2>
 <ul>
   {% for project in site.projects %}
@@ -20,7 +20,7 @@ Information about our organization
 </ul>
 </div>
 
-<div>
+<div id="papers">
 <h2>Recent papers</h2>
 <ul>
   {% for paper in site.publications %}
@@ -31,6 +31,6 @@ Information about our organization
 </ul>
 </div>
 
-<div>
+<div id="sponsors">
 <h2>Sponsors</h2>
 </div>
