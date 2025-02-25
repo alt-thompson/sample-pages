@@ -1,7 +1,6 @@
 <nav>
   {% for item in site.data.nav-bar %}
   <a href="{{ item.link | relative_url }}" 
-    style="padding: 8px;"
     {% if page.url == item.link %} class="current" {% endif %}>
     {{ item.name }}
   </a>
