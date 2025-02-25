@@ -11,7 +11,6 @@
 
   <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-<!-- <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark"> -->
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Logo</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -85,11 +84,22 @@
   </div>
 </nav>
     <h1>Home | Organization Name</h1>
-    <div>
-Information about our organization
+    <div class="container-fluid index-content-container">
+  <h1 class="section-header">About Us</h1>
+  <div class="row about-us-grid">
+    <div class="col-md-6 center-canvas">
+      <!-- What is canvas? -->
+      <canvas id="logo-canvas"></canvas>
+    </div>
+    <div class="col-md-6">
+      <p>
+        Information about our organization.
+      </p>
+    </div>
+  </div>
 </div>
 
-<div>
+<div class="container-fluid">
 <h2>Recent projects</h2>
 <ul>
   
@@ -131,7 +141,7 @@ Information about our organization
 </ul>
 </div>
 
-<div>
+<div class="container-fluid">
 <h2>Recent papers</h2>
 <ul>
   
@@ -166,7 +176,7 @@ Information about our organization
 </ul>
 </div>
 
-<div>
+<div class="container-fluid">
 <h2>Sponsors</h2>
 </div>
 
