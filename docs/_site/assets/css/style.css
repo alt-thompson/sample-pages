@@ -1,14 +1,16 @@
 /* CSS comment */
 * { border: 1px solid hotpink; }
 
-html { border: 1px solid black; }
+html { border: 1px solid lightpink; }
 
-body { background-color: lightblue; border: 1px solid red; }
+body { background-color: lightblue; border: 2px solid red; }
 
-h1 { color: navy; margin-left: 20px; border: 1px solid orange; }
+h1 { color: navy; margin-left: 20px; border: 2px solid orange; }
 
-div.section { background-color: green; color: pink; border: 1px solid tomato; }
+h2 { color: white; margin-left: 20px; border: 2px solid purple; }
 
-div#projects { background-color: blue; color: white; }
+div.section { background-color: green; color: pink; border: 2px solid yellow; }
 
-nav a { padding: 8px; }
+nav { background-color: white; border: 1px solid green; }
+
+nav a { padding: 8px; border: 2px solid darkgreen; }
