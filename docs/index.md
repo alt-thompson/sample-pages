@@ -3,9 +3,9 @@ layout: default
 title: Home | Organization Name
 ---
 
-<div class="container-fluid index-content-container">
+<div class="container-fluid">
   <h1 class="section-header">About Us</h1>
-  <div class="row about-us-grid">
+  <div class="row">
     <div class="col-md-6 center-canvas">
       <!-- TODO: What is canvas? -->
       <canvas id="logo-canvas"></canvas>
@@ -18,9 +18,9 @@ title: Home | Organization Name
   </div>
 </div>
 
-<div class="container-fluid index-content-container">
+<div class="container-fluid">
   <h1 class="section-header">Recent Projects</h1>
-  <div class="project-grid landing-page-project-grid">
+  <div class="project-grid">
   {% for project in site.projects %}
     <div class="project-card">
       <div class="project-image">
@@ -45,17 +45,17 @@ title: Home | Organization Name
   </div>
 </div>
 
-<div class="container-fluid index-content-container">
-<h2>Recent papers</h2>
-<ul>
-  {% for paper in site.publications %}
-    <li>
-      <h2>{{ paper.title }}</h2>
-    </li>
-  {% endfor %}
-</ul>
+<div class="container-fluid">
+  <h1 class="section-header">Recent Papers</h1>
+  <ul>
+    {% for paper in site.publications %}
+      <li>
+        <h2>{{ paper.title }}</h2>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
 
-<div class="container-fluid index-content-container">
-<h2>Sponsors</h2>
+<div class="container-fluid">
+  <h1 class="section-header">Sponsors</h1>
 </div>
