@@ -18,8 +18,8 @@ title: Home | Organization Name
   </div>
 </div>
 
-{% include card-grid.html section="projects" %}
-{% include card-grid.html section="publications" %}
+{% include card-grid.html section="projects" values=site.projects %}
+{% include card-grid.html section="publications" values=site.publications %}
 
 <!-- <div class="container-fluid">
   <h1 class="section-header">Recent Projects</h1>

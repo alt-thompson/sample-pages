@@ -1,35 +1,21 @@
+{% assign section = include.section | capitalize %}
+{% assign section_data = site.data.nav-bar | where: "name", section %}
+{% assign page_link = section_data | map: "link" | first| relative_url %}
+
 <div class="container-fluid">
-    {% assign section = include.section | capitalize %}
-    {% assign section_data = site.data.nav-bar | where: "name", section %}
-    {% assign section_data_link = section_data | map: "link" | first %}
-    section: {{ section }}<p>
-    section_data: {{ section_data }}<p></p>
-    section_data_link: {{ section_data_link }}<p></p>
-    {% assign page_link = section_data_link | relative_url %}
-    page_link: {{ page_link }}<p></p>
-
-    --
     <h1 class="section-header">Recent {{ section }}</h1>
+
+    <ul>
+        {% for value in include.values limit:3 %}
+          <li>
+            <p>{{ value.title }}</p>
+            <p>{{ value.timeline }}</p>
+            <p>{{ value.content | markdownify }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+
     <div class="see-all-link">
-
-        <!-- {{ site.data.nav-bar | where: "name", include.section }} -->
-        <!-- {{ site.data.nav-bar | where: "name", include.section | map: "link" | relative_url }} -->
-          
-        <a href="{{ page_link }}">See all {{ include.section | downcase }}</a>
-
+        <a href="{{ page_link }}">SEE ALL {{ include.section | upcase }} ></a>
     </div>
-    <!-- <div class="project-grid">
-    {% for project in site.projects %}
-      <div class="project-card">
-        <div class="project-image">
-          Image
-        </div>
-        <div class="project-info">
-          <p class="artifact-title line-clamp-one-line"> {{ project.name }} </p>
-          <p class="artifact-title line-clamp-one-line">{{ project.timeline }}</p>
-          <p>{{ project.content | markdownify }}</p>
-        </div>
-      </div>
-    {% endfor %}
-    </div> -->
   </div>
