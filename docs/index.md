@@ -20,36 +20,3 @@ title: Home | Organization Name
 
 {% include card-grid.html section="projects" values=site.projects %}
 {% include card-grid.html section="publications" values=site.publications %}
-
-<!-- <div class="container-fluid">
-  <h1 class="section-header">Recent Projects</h1>
-  <div class="project-grid">
-  {% for project in site.projects %}
-    <div class="project-card">
-      <div class="project-image">
-        Image
-      </div>
-      <div class="project-info">
-        <p class="artifact-title line-clamp-one-line"> {{ project.name }} </p>
-        <p class="artifact-title line-clamp-one-line">{{ project.timeline }}</p>
-        <p>{{ project.content | markdownify }}</p>
-      </div>
-    </div>
-  {% endfor %}
-  </div>
-</div> -->
-
-<!-- <div class="container-fluid">
-  <h1 class="section-header">Recent Papers</h1>
-  <ul>
-    {% for paper in site.publications %}
-      <li>
-        <h2>{{ paper.title }}</h2>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-
-<div class="container-fluid">
-  <h1 class="section-header">Sponsors</h1>
-</div> -->
