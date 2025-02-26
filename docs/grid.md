@@ -9,13 +9,13 @@ title: Grid Test Page
 </div>
 <div class="container mt-5">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4 mt-1">
       {% include card.html %}
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 mt-1">
       {% include card.html %}
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4 mt-1">
       {% include card.html %}
     </div>
   </div>
