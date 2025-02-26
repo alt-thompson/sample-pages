@@ -18,7 +18,10 @@ title: Home | Organization Name
   </div>
 </div>
 
-<div class="container-fluid">
+{% include card-grid.html section="projects" %}
+{% include card-grid.html section="publications" %}
+
+<!-- <div class="container-fluid">
   <h1 class="section-header">Recent Projects</h1>
   <div class="project-grid">
   {% for project in site.projects %}
@@ -33,19 +36,10 @@ title: Home | Organization Name
       </div>
     </div>
   {% endfor %}
-  <!-- <ul>
-    {% for project in site.projects %}
-      <li>
-        <h2>{{ project.name }}</h2>
-        <h3>{{ project.timeline }}</h3>
-        <p>{{ project.content | markdownify }}</p>
-      </li>
-    {% endfor %}
-  </ul> -->
   </div>
-</div>
+</div> -->
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <h1 class="section-header">Recent Papers</h1>
   <ul>
     {% for paper in site.publications %}
@@ -58,4 +52,4 @@ title: Home | Organization Name
 
 <div class="container-fluid">
   <h1 class="section-header">Sponsors</h1>
-</div>
+</div> -->
