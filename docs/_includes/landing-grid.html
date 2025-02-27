@@ -1,8 +1,9 @@
-<div class="container mt-5">
+<div class="container-fluid mt-5">
+    <h3 class="section-header text-center">{{ include.header }}</h3>
     <div class="row">
 
         {% for value in include.values limit:3 %}
-        <div class="col-sm-4">
+        <div class="col-sm-4 d-flex justify-content-center">
             
             {% include project-card.html project=value %}
             
