@@ -1,9 +1,7 @@
-<ul>
-    {% for value in include.values limit:3 %}
-      <li>
-        <p>{{ value.title }}</p>
-        <p>{{ value.timeline }}</p>
-        <p>{{ value.content | markdownify }}</p>
-      </li>
-    {% endfor %}
-  </ul>
+{% for value in include.values limit:3 %}
+<div>
+    
+    {% include project-card.html project=value %}
+    
+</div>
+{% endfor %}
