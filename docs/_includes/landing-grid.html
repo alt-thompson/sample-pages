@@ -1,7 +1,12 @@
-{% for value in include.values limit:3 %}
-<div>
-    
-    {% include project-card.html project=value %}
-    
+<div class="container mt-5">
+    <div class="row">
+
+        {% for value in include.values limit:3 %}
+        <div class="col-sm-4">
+            
+            {% include project-card.html project=value %}
+            
+        </div>
+        {% endfor %}
+    </div>
 </div>
-{% endfor %}
