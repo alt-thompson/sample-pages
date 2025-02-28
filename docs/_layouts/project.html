@@ -1,3 +1,7 @@
+{{ end_or_present | default: "Present" }}
+{% assign end_or_present = project.end-date %}
+{% capture timeline %} {{ project.start-date }} - {{ end_or_present }} {% endcapture %}
+
 <!doctype html>
 <html>
 
@@ -27,7 +31,9 @@
             </div>
             <div class="col-lg-3">
                 <h6 class="section-header">Date</h6>
-                <p>TODO: Date</p>
+                <p>{{ end_or_present }}</p>
+                <!-- <p>{{ timeline }}</p> -->
+                <!-- <p>{{ page.start-date | date: "%Y" }} - {{ page.end-date }}</p> -->
                 <h6 class="section-header">Project Lead</h6>
                 <p>TODO: Project Lead</p>
                 <h6 class="section-header">Sponsor</h6>

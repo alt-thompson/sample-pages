@@ -6,9 +6,7 @@ date: 2020-01-05
 ---
 
 {% comment %}
-
 TODO: What sort order do we want for projects?
-
 {% endcomment %}
 
 Project Five content
