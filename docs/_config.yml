@@ -5,4 +5,5 @@ baseurl: /sample-pages
 collections:
   people:
   projects:
+    output: true
   publications:
