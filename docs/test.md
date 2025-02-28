@@ -6,9 +6,24 @@ start-date: 2020-01-01
 end-date: 2023-01-01
 ---
 
-{% assign person-id = "person-one" %}
-{{ person-id }}
-<!-- {{ site.people | where_exp: "item", "item.short-name == 'person-one'" }} -->
+{% assign var = "person-one" %}
+{% assign items = site.people | where_exp: "record", "record.short-name contains var" %}
+<p>items: {{items | inspect}}</p>
+
+
+<p>{{ site.people | inspect }}</p>
+<p>{{ site.people[0].id }}</p>
+<p>lookup: {{ site.people[site.people[0].id] }}</p>
+<p>{{ site.data.people["person-one"]}}</p>
+<p>{{ site.collections.people | inspect }}</p>
+
+<p>{{ site.data.nav-bar | inspect }}</p>
+<p>{{ site.data.people | inspect }}</p>
+{% for collection in site.collections %}
+<h2> collection </h2>
+<h3>{{collection.name}}</h3>
+{{ collection | inspect }}
+{% endfor %}
 
 <p>{{ site.people | map: "url" }}</p>
 {{ site.people | where: "short-name", "person-one" | map: "url" }}
