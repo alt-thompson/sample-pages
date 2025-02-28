@@ -1,6 +1,5 @@
 ---
 layout: person
-short: person-one
 first-name: One
 name: Person One
 position: Person One's Position

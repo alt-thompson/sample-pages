@@ -1,7 +1,5 @@
 {% capture timeline %} {{ page.start-date | date: "%Y" }} - {{ page.end-date | date: "%Y" | default: "Present" }} {% endcapture %}
-{% assign var = page.lead %}
-{% assign lead_doc = site.people | where_exp: "record", "record.short contains var" %}
-{% assign lead = lead_doc[0] %}
+{% assign lead = site.people | where_exp: "item", "item.slug == page.lead" | first %}
 <!doctype html>
 <html>
 
