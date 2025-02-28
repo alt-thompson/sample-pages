@@ -32,8 +32,7 @@
                 <h6 class="section-header">Date</h6>
                 <p>{{ timeline }}</p>
                 <h6 class="section-header">Project Lead</h6>
-                <p>WIP: Project Lead</p>
-                <p>{{ lead[0].name }}</p>
+                <p><a href={{ lead[0].url | relative_url }}>{{lead[0].name}}</a></p>
                 <h6 class="section-header">Sponsor</h6>
                 <p>TODO: Sponsor</p>
                 <h6 class="section-header">Related News</h6>
