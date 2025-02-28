@@ -2,8 +2,8 @@
 layout: project
 name: Project Three
 start-date: 2020-01-01
-lead: person-one
-sponsor: person-two
+leads: [person-two, person-one]
+sponsors: [person-two, person-one]
 date: 2020-01-03
 ---
 
