@@ -1,5 +1,6 @@
 {% capture timeline %} {{ page.start-date | date: "%Y" }} - {{ page.end-date | date: "%Y" | default: "Present" }} {% endcapture %}
-{% assign lead = page.lead %}
+{% assign var = page.lead %}
+{% assign lead = site.people | where_exp: "record", "record.short contains var" %}
 <!doctype html>
 <html>
 
@@ -32,7 +33,7 @@
                 <p>{{ timeline }}</p>
                 <h6 class="section-header">Project Lead</h6>
                 <p>WIP: Project Lead</p>
-                <p>{{ lead }}</p>
+                <p>{{ lead | inspect }}</p>
                 <h6 class="section-header">Sponsor</h6>
                 <p>TODO: Sponsor</p>
                 <h6 class="section-header">Related News</h6>
