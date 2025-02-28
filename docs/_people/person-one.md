@@ -1,7 +1,9 @@
 ---
-short_name: person-one
+layout: person
+short-name: person-one
+first-name: One
 name: Person One
 position: Person One's Position
 ---
 
-Person One's content
+About Person One
