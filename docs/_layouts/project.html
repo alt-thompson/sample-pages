@@ -1,3 +1,5 @@
+{% capture timeline %} {{ page.start-date | date: "%Y" }} - {{ page.end-date | date: "%Y" | default: "Present" }} {% endcapture %}
+
 <!doctype html>
 <html>
 
@@ -27,7 +29,7 @@
             </div>
             <div class="col-lg-3">
                 <h6 class="section-header">Date</h6>
-                <p>{{ page.start-date | date: "%Y" }} - {{ page.end-date | date: "%Y" | default: "Present" }}</p>
+                <p>{{ timeline }}</p>
                 <h6 class="section-header">Project Lead</h6>
                 <p>TODO: Project Lead</p>
                 <h6 class="section-header">Sponsor</h6>

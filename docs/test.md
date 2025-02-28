@@ -3,7 +3,7 @@ layout: default
 title: Test Page
 date: 2020-01-01
 start-date: 2020-01-01
-end-date: 
+end-date: 2023-01-01
 ---
 
 {% assign start_date = page.date | date: "%Y" %}
