@@ -1,6 +1,4 @@
 {% capture timeline %} {{ page.start-date | date: "%Y" }} - {{ page.end-date | date: "%Y" | default: "Present" }} {% endcapture %}
-{% assign leads = site.people | where_exp: "item", "item.slug == page.leads" %}
-{% assign sponsor = site.people | where_exp: "item", "item.slug == page.sponsor" %}
 <!doctype html>
 <html>
 
@@ -32,12 +30,13 @@
                 <h6 class="section-header">Date</h6>
                 <p>{{ timeline }}</p>
                 <h6 class="section-header">Project Lead</h6>
-            {% for lead-id in page.leads %}
-                {% assign lead = site.people | where_exp: "item", "item.slug == lead-id" | first %}
+                {% assign lead = site.people | where_exp: "item", "item.slug == page.lead" | first %}
                 <p><a href={{ lead.url | relative_url }}>{{lead.name}}</a></p>
-            {% endfor %}
                 <h6 class="section-header">Sponsor</h6>
+                {% for sponsor-id in page.sponsors %}
+                {% assign sponsor = site.people | where_exp: "item", "item.slug == sponsor-id" | first %}
                 <p><a href={{ sponsor.url | relative_url }}>{{sponsor.name}}</a></p>
+                {% endfor %}
                 <h6 class="section-header">Related News</h6>
                 <p>TODO: Related News</p>
                 <h6 class="section-header">Related Projects</h6>
