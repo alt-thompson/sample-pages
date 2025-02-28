@@ -1,7 +1,8 @@
 ---
 layout: project
 name: Project Five
-timeline: 2020 - Present
+start-date: 2020-01-01
+end-date: 2024-01-01
 date: 2020-01-05
 ---
 
