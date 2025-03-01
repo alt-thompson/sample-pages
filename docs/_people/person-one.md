@@ -2,7 +2,8 @@
 layout: person
 first-name: One
 name: Person One
-position: Person One's Position
+role: Person One's Role
+department: P1 Dept
 ---
 
 About Person One

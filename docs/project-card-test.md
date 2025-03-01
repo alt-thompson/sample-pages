@@ -3,5 +3,5 @@ layout: default
 title: Project Card Test Page
 ---
 
-{% assign project = site.projects | first %}
-{% include project-card.html project=project %}
+{% assign member = site.people | first %}
+{% include member-card.html member=member %}
