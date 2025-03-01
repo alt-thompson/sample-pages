@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Project Card Test Page
+title: Paper Card Test Page
 ---
 
-{% assign member = site.people | first %}
-{% include member-card.html member=member %}
+{% assign paper = site.publications | first %}
+{% include paper-card.html paper=paper %}

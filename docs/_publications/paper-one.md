@@ -1,5 +1,8 @@
 ---
 title: Paper One Title
-link: 
-authors: person-one, person-two
+authors: [person-one, person-two]
+venue: Proceedings
+keywords: [keyword-one, keyword-two]
+download-link: 
+citation:
 ---
