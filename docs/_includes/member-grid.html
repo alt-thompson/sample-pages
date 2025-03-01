@@ -1,0 +1,11 @@
+<div class="container-fluid mt-5">
+    <h3 class="section-header p-2">{{ include.header }}</h3>
+    <!-- TODO: alignment -->
+    <div class="row d-flex align-items-start flex-direction column">
+        {% for value in include.values %}
+        <div class="col">
+            {% include member-card.html member=value %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
