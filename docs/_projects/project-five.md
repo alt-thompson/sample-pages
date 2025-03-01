@@ -2,7 +2,6 @@
 layout: project
 name: Project Five
 start-date: 2020-01-01
-end-date: 2024-01-01
 lead: person-one
 sponsors: [ person-two ]
 date: 2020-01-05
