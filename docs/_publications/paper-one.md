@@ -5,4 +5,6 @@ venue: Proceedings
 keywords: [keyword-one, keyword-two]
 download-link: 
 citation:
+project: project-five
+date: 2020-01-01
 ---
