@@ -3,12 +3,9 @@ layout: default
 title: Projects
 ---
 
-<ul>
-  {% for project in site.projects %}
-    <li>
-      <h2>{{ project.name }}</h2>
-      <h3>{{ project.timeline }}</h3>
-      <p>{{ project.content | markdownify }}</p>
-    </li>
-  {% endfor %}
-</ul>
+{% assign active-projects = site.projects | where_exp: "item", "item.end-date == nil" %}
+{% assign completed-projects = site.projects | where_exp: "item", "item.end-date != nil" %}
+
+{% include project-grid.html header="Projects" values=active-projects %}
+
+{% include project-grid.html header="Completed Projects" values=completed-projects %}
