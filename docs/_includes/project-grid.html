@@ -4,9 +4,8 @@
     <h3 class="section-header text-center p-2">{{ include.header }}</h3>
     <div class="row">
 
-        {% for value in recent_projects limit:4 %}
+        {% for value in recent_projects limit:include.limit %}
         <div class="col-lg-3 d-flex justify-content-center">
-            
             {% include project-card.html project=value %}
             
         </div>
