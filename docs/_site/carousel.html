@@ -10,14 +10,14 @@
 
   <!-- Demo styles -->
   <style>
-    body {
+    /* body {
       background: #000;
       font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
       font-size: 14px;
       color: #fff;
       margin: 0;
       padding: 0;
-    }
+    } */
 
     .swiper {
       width: 100%;
@@ -28,13 +28,13 @@
     .swiper-slide {
       text-align: center;
       font-size: 18px;
-      background: #444;
+      background: #24bbc0;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    .append-buttons {
+    /* .append-buttons {
       text-align: center;
       margin-top: 20px;
     }
@@ -48,14 +48,26 @@
       border-radius: 4px;
       margin: 0 10px;
       font-size: 13px;
-    }
+    } */
   </style>
 </head>
 
 <body>
   <!-- Swiper -->
   <div class="swiper">
-    <div class="swiper-wrapper"></div>
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+
+    </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
     <!-- Add Arrows -->
@@ -68,68 +80,68 @@
 
   <!-- Initialize Swiper -->
   <script>
-    let appendNumber = 600;
-    let prependNumber = 1;
+    // let appendNumber = 600;
+    // let prependNumber = 1;
     const swiper = new Swiper('.swiper', {
       slidesPerView: 3,
       centeredSlides: true,
       spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-      },
+    //   pagination: {
+    //     el: '.swiper-pagination',
+    //     type: 'fraction',
+    //   },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      virtual: {
-        slides: (function () {
-          const slides = [];
-          for (var i = 0; i < 600; i += 1) {
-            slides.push('Slide ' + (i + 1));
-          }
-          return slides;
-        })(),
-      },
+    //   virtual: {
+    //     slides: (function () {
+    //       const slides = [];
+    //       for (var i = 0; i < 600; i += 1) {
+    //         slides.push('Slide ' + (i + 1));
+    //       }
+    //       return slides;
+    //     })(),
+    //   },
     });
 
-    document
-      .querySelector('.slide-1')
-      .addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.slideTo(0, 0);
-      });
+    // document
+    //   .querySelector('.slide-1')
+    //   .addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //     swiper.slideTo(0, 0);
+    //   });
 
-    document
-      .querySelector('.slide-250')
-      .addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.slideTo(249, 0);
-      });
+    // document
+    //   .querySelector('.slide-250')
+    //   .addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //     swiper.slideTo(249, 0);
+    //   });
 
-    document
-      .querySelector('.slide-500')
-      .addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.slideTo(499, 0);
-      });
+    // document
+    //   .querySelector('.slide-500')
+    //   .addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //     swiper.slideTo(499, 0);
+    //   });
 
-    document
-      .querySelector('.prepend-2-slides')
-      .addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.virtual.prependSlide([
-          'Slide ' + --prependNumber,
-          'Slide ' + --prependNumber,
-        ]);
-      });
+    // document
+    //   .querySelector('.prepend-2-slides')
+    //   .addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //     swiper.virtual.prependSlide([
+    //       'Slide ' + --prependNumber,
+    //       'Slide ' + --prependNumber,
+    //     ]);
+    //   });
 
-    document
-      .querySelector('.append-slide')
-      .addEventListener('click', function (e) {
-        e.preventDefault();
-        swiper.virtual.appendSlide('Slide ' + ++appendNumber);
-      });
+    // document
+    //   .querySelector('.append-slide')
+    //   .addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //     swiper.virtual.appendSlide('Slide ' + ++appendNumber);
+    //   });
   </script>
 </body>
 
