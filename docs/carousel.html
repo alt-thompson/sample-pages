@@ -83,9 +83,27 @@
     // let appendNumber = 600;
     // let prependNumber = 1;
     const swiper = new Swiper('.swiper', {
-      slidesPerView: 3,
+      slidesPerView: 1,
     //   centeredSlides: true,
-      spaceBetween: 30,
+      spaceBetween: 10,
+        // Responsive breakpoints
+        breakpoints: {
+            // // when window width is >= 320px
+            // 320: {
+            //     slidesPerView: 2,
+            //     spaceBetween: 20
+            // },
+            // when window width is >= 480px
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            // when window width is >= 640px
+            800: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        },
     //   pagination: {
     //     el: '.swiper-pagination',
     //     type: 'fraction',
