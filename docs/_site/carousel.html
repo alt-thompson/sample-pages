@@ -10,14 +10,6 @@
 
   <!-- Demo styles -->
   <style>
-    /* body {
-      background: #000;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    } */
 
     .swiper {
       width: 100%;
@@ -34,21 +26,6 @@
       align-items: center;
     }
 
-    /* .append-buttons {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .append-buttons a {
-      display: inline-block;
-      border: 1px solid #007aff;
-      color: #007aff;
-      text-decoration: none;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin: 0 10px;
-      font-size: 13px;
-    } */
   </style>
 </head>
 
@@ -68,8 +45,6 @@
       <div class="swiper-slide">Slide 9</div>
 
     </div>
-    <!-- Add Pagination -->
-    <!-- <div class="swiper-pagination"></div> -->
     <!-- Add Arrows -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -80,86 +55,28 @@
 
   <!-- Initialize Swiper -->
   <script>
-    // let appendNumber = 600;
-    // let prependNumber = 1;
     const swiper = new Swiper('.swiper', {
       slidesPerView: 1,
-    //   centeredSlides: true,
       spaceBetween: 10,
         // Responsive breakpoints
         breakpoints: {
-            // // when window width is >= 320px
-            // 320: {
-            //     slidesPerView: 2,
-            //     spaceBetween: 20
-            // },
-            // when window width is >= 480px
+            // when window width is >= 640px
             640: {
                 slidesPerView: 2,
                 spaceBetween: 20
             },
-            // when window width is >= 640px
+            // when window width is >= 800px
             800: {
                 slidesPerView: 3,
                 spaceBetween: 30
             }
         },
-    //   pagination: {
-    //     el: '.swiper-pagination',
-    //     type: 'fraction',
-    //   },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    //   virtual: {
-    //     slides: (function () {
-    //       const slides = [];
-    //       for (var i = 0; i < 600; i += 1) {
-    //         slides.push('Slide ' + (i + 1));
-    //       }
-    //       return slides;
-    //     })(),
-    //   },
     });
 
-    // document
-    //   .querySelector('.slide-1')
-    //   .addEventListener('click', function (e) {
-    //     e.preventDefault();
-    //     swiper.slideTo(0, 0);
-    //   });
-
-    // document
-    //   .querySelector('.slide-250')
-    //   .addEventListener('click', function (e) {
-    //     e.preventDefault();
-    //     swiper.slideTo(249, 0);
-    //   });
-
-    // document
-    //   .querySelector('.slide-500')
-    //   .addEventListener('click', function (e) {
-    //     e.preventDefault();
-    //     swiper.slideTo(499, 0);
-    //   });
-
-    // document
-    //   .querySelector('.prepend-2-slides')
-    //   .addEventListener('click', function (e) {
-    //     e.preventDefault();
-    //     swiper.virtual.prependSlide([
-    //       'Slide ' + --prependNumber,
-    //       'Slide ' + --prependNumber,
-    //     ]);
-    //   });
-
-    // document
-    //   .querySelector('.append-slide')
-    //   .addEventListener('click', function (e) {
-    //     e.preventDefault();
-    //     swiper.virtual.appendSlide('Slide ' + ++appendNumber);
-    //   });
   </script>
 </body>
 
